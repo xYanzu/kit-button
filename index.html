@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit Button by xYanzu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            margin: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        .btn {
+            width: 200px;
+            padding: 15px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        /* Button 1: Rainbow Hover */
+        .btn1 {
+            background: linear-gradient(45deg, #ff0066, #ff6600, #ffcc00, #33cc33, #33ccff, #6600cc);
+            background-size: 600% 600%;
+            color: white;
+        }
+        .btn1:hover {
+            animation: rainbow 1s ease infinite;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* Button 2: Pulse Effect */
+        .btn2 {
+            background-color: #3498db;
+            color: white;
+            box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7);
+        }
+        .btn2:hover {
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(52, 152, 219, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+        }
+        /* Button 3: Slide in Border */
+        .btn3 {
+            background-color: transparent;
+            color: #2ecc71;
+            border: 2px solid #2ecc71;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn3::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #2ecc71;
+            top: 100%;
+            left: 0;
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        .btn3:hover::before {
+            top: 0;
+        }
+        .btn3:hover {
+            color: white;
+        }
+        /* Button 4: Text Zoom */
+        .btn4 {
+            background-color: #9b59b6;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn4 span {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .btn4:hover span {
+            transform: scale(1.2);
+        }
+        /* Button 5: Animated Gradient */
+        .btn5 {
+            background: linear-gradient(45deg, #ff6b6b, #ff9e6b, #ffc36b, #6bffc3, #6bc3ff, #6b6bff);
+            background-size: 300% 300%;
+            color: white;
+            border: none;
+            transition: background-position 0.5s, box-shadow 0.5s;
+        }
+        .btn5:hover {
+            background-position: right center;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+        footer {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .social-icons a {
+            color: #333;
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kit Button by xYanzu</h1>
+    </header>
+    <div class="container">
+        <!-- Button 1: Rainbow Hover -->
+        <button class="btn btn1">Rainbow Hover</button>
+        <!-- Button 2: Pulse Effect -->
+        <button class="btn btn2">Pulse Effect</button>
+        <!-- Button 3: Slide in Border -->
+        <button class="btn btn3">Slide in Border</button>
+        <!-- Button 4: Text Zoom -->
+        <button class="btn btn4"><span>Text Zoom</span></button>
+        <!-- Button 5: Animated Gradient -->
+        <button class="btn btn5">Animated Gradient</button>
+    </div>
+    <footer>
+        <div class="social-icons">
+            <a href="https://tryhackme.com/p/xYanzu" target="_blank" title="TryHackMe"><i class="fas fa-globe"></i></a>
+            <a href="https://discordlookup.com/user/1197193842210902092" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/yanzu1337" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>By xYanzu</p>
+    </footer>
+    <script>
+    </script>
+</body>
+</html>
